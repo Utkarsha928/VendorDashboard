@@ -5,7 +5,7 @@
   padding: 0;
 }
 
-/* Sidebar */
+
 .sidebar {
   width: 60px;
   background-color:  #f9f9f9;
@@ -13,7 +13,7 @@
   //padding: 16px 0;
 }
 
-/* Main area */
+
 .main-area {
   flex: 1;
   display: flex;
@@ -22,7 +22,7 @@
    gap: 24px;
 }
 
-/* Header */
+
 .header {
   display: flex;
   justify-content: space-between;
@@ -55,7 +55,6 @@
   font-weight: 500;
 }
 
-/* Charts Row */
 .chart-section {
   display: flex;
   gap: 16px;
@@ -117,7 +116,7 @@ app-vendor-radial-chart {
   margin: 0;
 }
 .footer{
-    border-top: 1px solid #eee; /* 🔼 adds separator above footer */
+    border-top: 1px solid #eee; 
   padding-top: 0.75rem;
   margin-top: 0.75rem;
   display: flex;

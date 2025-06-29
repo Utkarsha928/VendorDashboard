@@ -28,9 +28,7 @@ ngOnInit(){
     this.loading = false;
   })
 }
-// getField(field: string): boolean {
-//   return this.gridColumns.some(col => col.column_name === field);
-// }
+
 getInitials(name: any): string {
   return `${name.first_name.charAt(0)}${name.last_name.charAt(0)}`.toUpperCase();
 }
