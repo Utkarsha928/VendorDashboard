@@ -1,0 +1,65 @@
+<div class="spinner-container" *ngIf="loading">
+    <div class="spinner"></div>
+</div>
+<div class="table-wrapper">
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th><input type="checkbox" [checked]="isAllSelected()" (change)="toggleAllSelection($event)" /></th>
+                <th *ngFor="let col of gridColumns">{{ col.column_name }}
+                    <i *ngIf="col.column_name === 'Status'" class="fa-solid fa-arrow-down" style="margin-left:4px;"></i>
+                    <i *ngIf="col.column_name === 'Role'" class="fa-regular fa-circle-question" style="margin-left:4px;"></i>
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of gridData">
+                <td><input type="checkbox" [(ngModel)]="user.selected" /></td>
+                <!-- Name -->
+                <td>
+                    <div class="name-cell">
+                        <span class="avatar">{{ getInitials(user.name) }}</span>
+                        <div>
+                            <strong>{{ user.name.first_name }} {{ user.name.last_name }}</strong>
+                            <div class="username">{{ user.name.handle }}</div>
+                        </div>
+                    </div>
+                </td>
+                <!-- Status -->
+                <td>
+                    <span [class]="user.status === 'Customer' ? 'status active' : 'status inactive'">{{ user.status }}</span>
+                </td>
+                <td>{{ user.role }}</td>
+                <td>
+                    <div class="progress-bar">
+                        <div class="progress" [style.width.%]="user.license_used"></div>
+                    </div>
+                    {{ user.license_used }}%
+                </td>
+                <!-- Teams -->
+                <td>
+                    <span *ngFor="let team of user.teams" class="team-badge" [style.color]="team.text_color"
+                        [style.backgroundColor]="team.background_color">
+                        {{ team.value }}
+                    </span>
+                </td>
+                <td class="actions">
+                    <span>
+                        <i class="fa-solid fa-pen" (click)="editUser(user)"></i>
+                        <i class="fa-solid fa-trash" (click)="deleteUser(user)"></i>
+                    </span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="modal-backdrop" *ngIf="showEditModal">
+    <div class="modal">
+        <h3>Team Member Name</h3>
+        <p>{{ selectedUserName }}</p>
+        <button (click)="closeEditModal()">Close</button>
+    </div>
+</div>

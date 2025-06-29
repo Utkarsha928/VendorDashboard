@@ -1,0 +1,132 @@
+.chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 0 auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.header-content {
+  text-align: left;
+}
+
+.header-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 4px 0;
+}
+
+.header-subtitle {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.surge-badge {
+  display: flex;
+  align-items: right;
+  background-color: #f0f7f0;
+  padding: 4px 8px;
+  border-radius: 12px;
+  color: #4caf50;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.surge-icon {
+  margin-right: 4px;
+}
+
+.menu-dots {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #666;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transform: rotate(90deg);
+  &:hover {
+    color: #333;
+  }
+}
+
+.chart-content{
+    display: flex;
+    
+}
+
+
+.chart-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 20px;
+}
+
+.chart-value {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+}
+
+.chart-footer {
+  text-align: center;
+  width: 100%;
+}
+
+.footer-warning {
+  font-size: 14px;
+  font-weight: 600;
+  //color: #ff6b6b;
+  margin: 0 0 8px 0;
+}
+
+.footer-info {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 16px 0;
+}
+
+.upgrade-button {
+  background: #4c4e53;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+
+  &:hover {
+    background: #3a5bc7;
+  }
+}

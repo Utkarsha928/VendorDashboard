@@ -1,0 +1,61 @@
+.dashboard-container {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  width: fit-content;
+}
+
+.card {
+  flex: 1 1 48%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  
+}
+.card:first-child {
+  flex: 0 0 60%; /* Vendor Breakdown - wider */
+}
+
+.card:last-child {
+  flex: 0 0 38%; /* Vendors Monitored - smaller */
+}
+
+.card-header {
+   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.card-header .icon {
+  font-size: 24px;
+}
+.inside-header{
+    display: flex;
+}
+.card-footer {
+  margin-top: auto;
+  text-align: right;
+}
+.divider {
+  border-top: 1px solid #e5e7eb;
+  margin: 16px 0;
+}
+.menu-icon {
+  font-size: 18px;
+  color: #6b7280;
+  cursor: pointer;
+  user-select: none;
+}
+
+button {
+  background-color: #f3f4f6;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}

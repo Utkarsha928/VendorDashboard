@@ -1,0 +1,27 @@
+
+  <!-- <div class="chart-header">
+    <div class="header-content">
+      <h3 class="header-title">Vendors monitored</h3>
+      <p class="header-subtitle">You're using 80% of available spots.</p>
+    </div>
+    <div class="header-actions">
+      <button class="menu-dots" >⋮</button>
+    </div>
+  </div> -->
+  <div class="chart-content">
+    <div>
+      <apx-chart [series]="series" [chart]="chart" [plotOptions]="plotOptions" [fill]="fill" [colors]="colors"
+      [stroke]="stroke">
+    </apx-chart>
+    <p class="footer-warning">You've almost reached your limit</p>
+    <p class="footer-info">You have used 80% of your available spots.Upgrade plan to monitor more vendors</p>
+    </div>
+    <div>
+        <span><i class="fa-solid fa-arrow-trend-up" style="color: green;">10%</i></span>
+        <!-- <span class="surge-value">10%</span> -->
+    </div>
+  </div>
+
+ <!-- <div class="chart-footer">
+    <button class="upgrade-button">Upgrade.</button>
+  </div> -->
